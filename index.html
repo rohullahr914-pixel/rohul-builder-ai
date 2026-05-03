@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ROHUL Builder AI | Premium AI Website Generator</title>
+  <meta name="description" content="ROHUL Builder AI is a premium AI landing page generator built by Rohullah. Generate modern websites from one idea." />
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#05050b;color:#f7f7ff;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 12% 12%,rgba(232,255,71,.18),transparent 32%),radial-gradient(circle at 86% 10%,rgba(76,201,240,.17),transparent 30%),radial-gradient(circle at 48% 92%,rgba(139,92,246,.20),transparent 35%);z-index:-3}
+    body:after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:58px 58px;z-index:-2}
+    a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:80;background:rgba(5,5,11,.72);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.10)}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.5px}
+    .logo{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;color:#05050b;font-weight:1000;background:linear-gradient(135deg,#e8ff47,#4cc9f0);box-shadow:0 18px 45px rgba(232,255,71,.20)}
+    .links{display:flex;align-items:center;gap:25px;color:#b7bdd6;font-size:14px}.links a:hover{color:#e8ff47}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:15px;font-weight:850;border:1px solid transparent;transition:.25s;cursor:pointer;font-size:14px}
+    .btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(135deg,#e8ff47,#fff59d);color:#07070f;box-shadow:0 14px 40px rgba(232,255,71,.22)}
+    .btn-dark{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);color:#f7f7ff}
+    .hero{padding:94px 0 64px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:10px;color:#c4c8de;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);padding:9px 14px;border-radius:999px;font-size:13px}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:#2ee59d;box-shadow:0 0 20px #2ee59d}
+    h1{font-size:clamp(46px,7vw,92px);line-height:.94;letter-spacing:-4px;margin:22px 0 20px;font-weight:1000}
+    h1 span{background:linear-gradient(135deg,#e8ff47,#4cc9f0);-webkit-background-clip:text;color:transparent}
+    .lead{font-size:19px;line-height:1.75;color:#b7bdd6;max-width:660px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.hero-note{margin-top:16px;color:#7f87a8;font-size:13px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}.stat{padding:18px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11)}
+    .stat b{display:block;font-size:29px;color:#e8ff47}.stat small{color:#aeb5d5}
+    .app-card{border:1px solid rgba(255,255,255,.12);border-radius:34px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.04));box-shadow:0 35px 100px rgba(0,0,0,.48);position:relative;overflow:hidden}
+    .app-shell{position:relative;z-index:1;border-radius:26px;background:#070913;border:1px solid rgba(255,255,255,.12);overflow:hidden}.topbar{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid rgba(255,255,255,.10)}
+    .dots{display:flex;gap:8px}.dot{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dot:nth-child(2){background:#ffbd2e}.dot:nth-child(3){background:#28c840}
+    .url{color:#7f87a8;font-size:12px;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.05)}
+    .app-body{padding:22px}.prompt{min-height:112px;border-radius:22px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);padding:20px}
+    .prompt small{color:#e8ff47;font-weight:800;letter-spacing:.6px}.prompt p{margin-top:12px;color:#dfe3ff;font-size:17px;line-height:1.55}
+    .generate{margin-top:16px;height:54px;border-radius:17px;background:linear-gradient(135deg,#e8ff47,#fff59d);color:#07070f;display:flex;align-items:center;justify-content:center;font-weight:1000}
+    .preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.preview-box{height:116px;border-radius:19px;background:linear-gradient(135deg,rgba(232,255,71,.18),rgba(76,201,240,.12));border:1px solid rgba(255,255,255,.11);padding:15px}
+    .line{height:10px;border-radius:20px;background:rgba(255,255,255,.28);margin:10px 0}.short{width:58%}
+    .float-badge{position:absolute;right:-10px;bottom:42px;z-index:4;background:#080b18;border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:14px 16px;box-shadow:0 25px 80px rgba(0,0,0,.45);font-weight:900}
+    .float-badge span{color:#2ee59d}
+    section{padding:74px 0}.section-title{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-2px;margin-bottom:14px;font-weight:1000}
+    .section-sub{color:#b7bdd6;max-width:720px;font-size:17px;line-height:1.75;margin-bottom:32px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{min-height:230px;padding:28px;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.12);transition:.28s;position:relative;overflow:hidden}
+    .card:hover{transform:translateY(-8px);border-color:rgba(232,255,71,.42)}.icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:25px;margin-bottom:19px;background:linear-gradient(135deg,#8b5cf6,#4cc9f0)}
+    .card h3{font-size:22px;margin-bottom:10px}.card p{color:#b7bdd6;line-height:1.7}
+    .workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{padding:24px;border-radius:25px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055)}
+    .num{color:#e8ff47;font-weight:1000;font-size:14px}.step h3{margin:12px 0 8px}.step p{color:#b7bdd6;font-size:14px}
+    .demo{border-radius:36px;background:linear-gradient(135deg,rgba(232,255,71,.14),rgba(76,201,240,.08));border:1px solid rgba(232,255,71,.22);padding:28px;display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;align-items:center;box-shadow:0 35px 100px rgba(0,0,0,.35)}
+    .demo h2{font-size:clamp(32px,4vw,52px);line-height:1.05;margin-bottom:12px}.demo p{color:#c5cae3;line-height:1.75}
+    .demo-screen{border-radius:26px;background:#f6f8ff;color:#09111f;padding:22px;min-height:290px}.demo-screen h3{font-size:30px;line-height:1.05;margin-bottom:16px}
+    .demo-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.demo-mini{height:96px;border-radius:16px;background:#e9eefc;padding:12px}.demo-mini div{height:8px;border-radius:12px;background:#c4cce0;margin:10px 0}.demo-mini div:nth-child(2){width:65%}
+    .contact{text-align:center;border-radius:36px;padding:44px;background:linear-gradient(135deg,rgba(232,255,71,.16),rgba(139,92,246,.12));border:1px solid rgba(255,255,255,.13);box-shadow:0 35px 100px rgba(0,0,0,.38)}
+    .contact h2{font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-2px;margin-bottom:14px}.contact p{color:#c5cae3;max-width:690px;margin:0 auto 26px;line-height:1.75}
+    footer{border-top:1px solid rgba(255,255,255,.10);padding:28px 0;color:#8f97b8;font-size:14px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .fade{opacity:0;transform:translateY(24px);animation:fade .85s ease forwards}.d1{animation-delay:.14s}.d2{animation-delay:.28s}@keyframes fade{to{opacity:1;transform:none}}
+    @media(max-width:900px){.links{display:none}.hero{padding-top:58px}.hero-grid,.demo{grid-template-columns:1fr}.grid3,.workflow,.stats{grid-template-columns:1fr}h1{letter-spacing:-2px}.preview-grid{grid-template-columns:1fr}.float-badge{position:static;margin-top:14px;display:inline-block}.contact{padding:32px 18px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#"><span class="logo">R</span> ROHUL Builder AI</a><div class="links"><a href="#features">Features</a><a href="#workflow">Workflow</a><a href="#demo">Demo</a><a href="#contact">Contact</a></div><a class="btn btn-primary" href="#contact">Hire Developer</a></div></nav>
+
+  <header class="hero container">
+    <div class="hero-grid">
+      <div class="fade">
+        <div class="pill"><span class="live-dot"></span> Premium AI Website Generator Project</div>
+        <h1>Turn one idea into a <span>world-class website.</span></h1>
+        <p class="lead">ROHUL Builder AI is a modern SaaS-style web app that generates complete landing pages from a single startup idea. Built with clean HTML, CSS, JavaScript, API workflow, responsive UI, live preview, and export features.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#demo">View Project</a><a class="btn btn-dark" href="https://github.com/rohullahr914-pixel" target="_blank">GitHub Profile</a></div>
+        <div class="hero-note">Designed and developed by Rohullah — Web Designer & Front-End Developer</div>
+        <div class="stats"><div class="stat"><b>AI</b><small>API Integration</small></div><div class="stat"><b>100%</b><small>Responsive UI</small></div><div class="stat"><b>1 Click</b><small>Copy / Download</small></div></div>
+      </div>
+      <div class="app-card fade d1">
+        <div class="app-shell"><div class="topbar"><div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="url">rohul-builder.ai/app</div></div><div class="app-body"><div class="prompt"><small>STARTUP IDEA</small><p>An AI tool that creates a beautiful website for any business in seconds.</p></div><div class="generate">✦ Generate Website</div><div class="preview-grid"><div class="preview-box"><div class="line"></div><div class="line short"></div><div class="line"></div></div><div class="preview-box"><div class="line"></div><div class="line short"></div><div class="line"></div></div></div></div></div>
+        <div class="float-badge"><span>●</span> Portfolio Ready</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="container fade d1">
+    <h2 class="section-title">Why this project looks professional</h2>
+    <p class="section-sub">This project is not only a design. It shows UI thinking, JavaScript logic, API connection, user experience, and product-level polish.</p>
+    <div class="grid3"><div class="card"><div class="icon">🎨</div><h3>Premium UI Design</h3><p>Dark luxury theme, strong typography, gradients, cards, animations, and clean spacing.</p></div><div class="card"><div class="icon">🤖</div><h3>AI API Workflow</h3><p>Uses an AI prompt system and API logic to generate complete HTML websites.</p></div><div class="card"><div class="icon">⚡</div><h3>Real App Features</h3><p>Live preview, loading state, error handling, copy HTML, and download website features.</p></div></div>
+  </section>
+
+  <section id="workflow" class="container fade d2">
+    <h2 class="section-title">How the app works</h2>
+    <p class="section-sub">The app takes a short idea and turns it into a full landing page with professional sections.</p>
+    <div class="workflow"><div class="step"><span class="num">01</span><h3>Enter Idea</h3><p>User describes a startup or business in one sentence.</p></div><div class="step"><span class="num">02</span><h3>AI Builds</h3><p>The app sends the prompt and creates a complete website structure.</p></div><div class="step"><span class="num">03</span><h3>Preview</h3><p>The generated website opens inside a live preview frame.</p></div><div class="step"><span class="num">04</span><h3>Export</h3><p>User can copy or download the generated HTML file.</p></div></div>
+  </section>
+
+  <section id="demo" class="container fade d2">
+    <div class="demo"><div><h2>Built like a real SaaS product.</h2><p>This project proves that I can build modern business websites, product interfaces, landing pages, and AI-based web tools with a clean professional look.</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">Work With Me</a><a class="btn btn-dark" href="https://peaceful-croissant-9cf9de.netlify.app" target="_blank">Open Live Version</a></div></div><div class="demo-screen"><h3>Generate your website in seconds.</h3><div class="demo-cards"><div class="demo-mini"><div></div><div></div></div><div class="demo-mini"><div></div><div></div></div><div class="demo-mini"><div></div><div></div></div></div></div></div>
+  </section>
+
+  <section id="contact" class="container fade d2">
+    <div class="contact"><h2>Need a website like this?</h2><p>I can design and build modern responsive websites with clean code, professional UI, and live deployment. I deliver code files and the website can be hosted on your own domain and hosting.</p><div class="hero-actions" style="justify-content:center"><a class="btn btn-primary" href="mailto:fsscorozal@gmail.com">Email Me</a><a class="btn btn-dark" href="https://github.com/rohullahr914-pixel" target="_blank">View GitHub</a></div></div>
+  </section>
+
+  <footer><div class="container foot"><span>© 2026 ROHUL Builder AI — Built by Rohullah</span><span>HTML • CSS • JavaScript • API • Responsive Design</span></div></footer>
+</body>
+</html>
